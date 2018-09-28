@@ -1,26 +1,38 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="css/style.css" rel="stylesheet">
+
+    <title>Coworkit StartScreen</title>
 </head>
 <body>
+        <h1 class="start-screen-title">Start</h1>
+
+
     <div id="kopf">
         
     </div>
-    <div id="koerper">
-        <div id="zeile1">
-            <div id="box1" class="box">1</div>
-            <div id="box2" class="box">2</div>
-            <div id="box3" class="box">3</div>
-            <div id="box4" class="box">4</div>
+    <div id="box-group">
+        <div id="box-grid">
+            <div id="box1" class="box-normal"><img src="image/man-user.svg" alt="" width="150" height="150" ></div>
+            <div id="box2" class="box-normal">2</div>
+            <div id="box3" class="box-normal">3</div>
+            <div id="box4" class="box-normal">4</div>
         </div>
-        <div id="zeile2">
-            <div id="box5" class="largebox">5</div>
-            <div id="box6" class="box">6</div>
-            <div id="box7" class="box">7</div>
+        <div id="box-grid">
+            <div id="box5" class="box-large">5</div>
+            <div id="box6" class="box-normal">6</div>
+            <div id="box7" class="box-normal">7</div>
         </div>
     </div>
     <div id="zeile">
 
     </div>
+
+    <script src="../../js/jquery-3.3.1.min.js"></script>
+    <script src="../../metro/js/metro.js"></script>
+    <script src="start.js"></script>
 </body>
 </html>
