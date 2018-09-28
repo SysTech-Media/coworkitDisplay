@@ -6,6 +6,13 @@ body{
     margin: 0;
 }
 
+object.wersitztwo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200%;
+}
+
 .start-screen {
   min-width: 100%;
   height: 100%;
