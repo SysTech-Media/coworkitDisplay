@@ -8,7 +8,7 @@ $.StartScreen = function(){
     };
 
     var setTilesAreaSize = function(){
-        var groups = $(".box-group");
+        var groups = $(".tiles-group");
         var tileAreaWidth = 80;
         $.each(groups, function(i, t){
             if (width <= Metro.media_sizes.LD) {
@@ -17,7 +17,7 @@ $.StartScreen = function(){
                 tileAreaWidth += $(t).outerWidth() + 80;
             }
         });
-        $(".box-area").css({
+        $(".tiles-area").css({
             width: tileAreaWidth
         });
     };
@@ -36,7 +36,7 @@ $.StartScreen = function(){
 
 $.StartScreen();
 
-$.each($('[class*=box-]'), function(){
+$.each($('[class*=tile-]'), function(){
     var tile = $(this);
     setTimeout(function(){
         tile.css({
@@ -48,7 +48,7 @@ $.each($('[class*=box-]'), function(){
     }, Math.floor(Math.random()*500));
 });
 
-$(".box-group").animate({
+$(".tiles-group").animate({
     left: 0
 });
 

@@ -3,36 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="css/style.css" rel="stylesheet">
 
-    <title>Coworkit StartScreen</title>
+    <link href="css/metro-all.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+    <title>coworkit StartScreen</title>
 </head>
-<body>
+<body class="bg-dark fg-white h-vh-100">
+
+    <div class="container-fluid start-screen no-scroll-y h-100">
         <h1 class="start-screen-title">Start</h1>
 
-
-    <div id="kopf">
-        
-    </div>
-    <div id="box-group">
-        <div id="box-grid">
-            <div id="box1" class="box-normal"><img src="image/man-user.svg" alt="" width="150" height="150" ></div>
-            <div id="box2" class="box-normal">2</div>
-            <div id="box3" class="box-normal">3</div>
-            <div id="box4" class="box-normal">4</div>
+        <div class="tiles-area clear">
+            <div class="tiles-grid tiles-group size-2 fg-white" data-group-title="">
+                <a href="map.html" data-role="tile" class="bg-indigo fg-white">
+                    <span class="mif-user icon"></span>
+                    <span class="branding-bar">Wer sitzt wo?</span>
+                </a>
+                <div data-role="tile" class="bg-cyan fg-white">
+                    <span class="mif-envelop icon"></span>
+                    <span class="branding-bar">Email</span>
+                </div>
+                <div data-role="tile" class="bg-orange fg-white" data-size="wide">
+                    <span class="mif-chrome icon"></span>
+                    <span class="branding-bar">Termine</span>
+                    <span class="badge-bottom">10</span>
+                </div>
+                <div data-role="tile" data-size="small">
+                    <span class="mif-apple icon"></span>
+                </div>
+                <div data-role="tile" data-size="small" class="bg-red fg-white">
+                    <span class="mif-bell icon"></span>
+                </div>
+                <div data-role="tile" data-size="small" class="bg-teal fg-white col-1 row-6">
+                    <span class="mif-windows icon"></span>
+                </div>
+                <div data-role="tile" data-size="small" class="bg-brown fg-white col-2 row-6">
+                    <span class="mif-wind icon"></span>
+                </div>
+                <div data-role="tile" class="bg-cyan fg-white">
+                    <span class="mif-table icon"></span>
+                    <span class="branding-bar">Tables</span>
+                </div>
+            </div>
         </div>
-        <div id="box-grid">
-            <div id="box5" class="box-large">5</div>
-            <div id="box6" class="box-normal">6</div>
-            <div id="box7" class="box-normal">7</div>
-        </div>
-    </div>
-    <div id="zeile">
-
     </div>
 
-    <script src="../../js/jquery-3.3.1.min.js"></script>
-    <script src="../../metro/js/metro.js"></script>
+
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/metro.js"></script>
     <script src="start.js"></script>
+
 </body>
 </html>
