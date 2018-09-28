@@ -9,7 +9,7 @@ margin: 0;
 #kopf{
     height: 200px;
     width: 100%;
-    background-color: green;
+    background-color: red;
     position: relative;
     float: left;
 }
