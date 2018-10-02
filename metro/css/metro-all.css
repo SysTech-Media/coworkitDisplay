@@ -30274,7 +30274,22 @@ video:-webkit-full-screen {
   height: 150px;
   -webkit-box-shadow: inset 0 0 1px #FFFFCC;
           box-shadow: inset 0 0 1px #FFFFCC;
-  cursor: pointer;
+  /*cursor: pointer; */
+  position: relative;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.tile-news {
+  display: block;
+  background-color: #1ba1e2;
+  color: #ffffff;
+  width: 150px;
+  height: 150px;
+  -webkit-box-shadow: inset 0 0 1px #FFFFCC;
+          box-shadow: inset 0 0 1px #FFFFCC;
   position: relative;
   overflow: hidden;
   -webkit-user-select: none;
@@ -30298,6 +30313,14 @@ video:-webkit-full-screen {
   width: 310px;
   height: 310px;
 }
+.tile-news {
+  width: 950px;
+  height: 460px;
+}
+.tile-map {
+  width: 630px;
+  height: 130px;
+}
 .tile-app {
   width: 44px;
   height: 44px;
@@ -30306,6 +30329,7 @@ video:-webkit-full-screen {
 .tile-medium .icon,
 .tile-wide .icon,
 .tile-large .icon,
+.tile-news -icon,
 .tile-app .icon {
   max-width: 33%;
   height: 33%;
@@ -30322,6 +30346,7 @@ video:-webkit-full-screen {
 .tile-medium .branding-bar,
 .tile-wide .branding-bar,
 .tile-large .branding-bar,
+.tile-news .branding-bar,
 .tile-app .branding-bar {
   height: 32px;
   line-height: 32px;
@@ -30375,6 +30400,7 @@ video:-webkit-full-screen {
 .tile-medium:hover,
 .tile-wide:hover,
 .tile-large:hover,
+.tile-news:hover,
 .tile-app:hover {
   outline: rgba(29, 29, 29, 0.1) solid 4px;
 }

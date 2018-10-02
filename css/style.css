@@ -14,6 +14,14 @@ object.wersitztwo {
   width: 80%;
 }
 
+.top-container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 150px;
+}
+
 .start-screen {
   min-width: 100%;
   height: 100%;
@@ -22,7 +30,7 @@ object.wersitztwo {
 }
 .start-screen-title {
   position: fixed;
-  top: 20px;
+  top: 180px;
   left: 80px;
   display: none;
 }
@@ -31,7 +39,7 @@ object.wersitztwo {
 }
 .tiles-group {
   margin-left: 0;
-  margin-top: 50px;
+  margin-top: 120px;
 }
 @media all and (min-width: 768px) {
   .start-screen-title {
