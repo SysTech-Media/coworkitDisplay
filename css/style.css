@@ -41,6 +41,10 @@ object.wersitztwo {
   margin-left: 0;
   margin-top: 120px;
 }
+.container-content {
+  margin-left: 0;
+  margin-top: 120px;
+}
 @media all and (min-width: 768px) {
   .start-screen-title {
     display: block;
@@ -53,5 +57,8 @@ object.wersitztwo {
   }
   .tiles-group {
     margin-left: 80px;
+  }
+  .container-content {
+    margin-top: 120px;
   }
 }
