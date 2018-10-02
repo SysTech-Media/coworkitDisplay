@@ -23,7 +23,6 @@ body{
         background-position-y: 50%;
         background-repeat: no-repeat;
         background-size: 30%;
-        background
     }
     
     #koerper{
@@ -38,7 +37,7 @@ body{
   .heading {
       height: 100px;
       font-size: 2em;
-      border: 3px dotted orange;
+      border: 2px dotted orange;
       font-weight: 300;
   }
 
