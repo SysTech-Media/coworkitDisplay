@@ -1,86 +1,117 @@
-body{
-    position: relative;
-    width: 1080px;
-    height: 1920px;
-    padding: 0;
-    margin: 0;
-    background-color: lightgrey;
+body {
+	position: relative;
+	width: 1080px;
+	height: 1920px;
+	padding: 0;
+	margin: 0;
+	background-color: lightgrey;
 }
 
-object.wersitztwo {
-  top: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  display: block;
-  width: 50%;
+svg.wersitztwo {
+	top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	display: block;
+	width: 50%;
 }
 
 iframe.members {
-  top: 0px;
-  top: 0px;
-  margin-left: 60px;
-  margin-right: auto;
-  margin-top: 30px;
-  position: relative;
+  bottom: 0px;
+  left: 0px;
+  position: fixed;
   display: block;
-  width: 1080px;
+  width: 100%;
   height: 800px;
 }
 
 .top-container {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 150px;
+}
+
+.time {
   position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 150px;
+  top: 180px;
+  right: 20px;
+  display: block;
+  width: 120px;
+  height: 60px;
 }
 
 .start-screen {
-  min-width: 100%;
-  height: 100%;
-  position: relative;
-  padding-bottom: 20px;
+	min-width: 100%;
+	height: 100%;
+	position: relative;
+	padding-bottom: 20px;
 }
+
 .start-screen-title {
-  position: fixed;
-  top: 180px;
-  left: 80px;
-  display: none;
+	position: fixed;
+	top: 180px;
+	left: 80px;
+	display: none;
 }
+
 [class*=tile-] {
-  transform: scale(0.8);
+	transform: scale(0.8);
 }
+
 .tiles-group {
-  margin-left: 0;
-  margin-top: 120px;
+	margin-left: 0;
+	margin-top: 120px;
 }
-.container-content {
-  margin-left: 0;
-  margin-top: 120px;
+
+.container-content {
+	margin-left: 0;
+	margin-top: 120px;
 }
+
 @media all and (min-width: 768px) {
-  .start-screen-title {
-    display: block;
-  }
-  .start-screen {
-    padding: 140px 80px 0px 0px;
-  }
-  .tiles-group {
-    left: 100px;
-  }
-  .tiles-group {
-    margin-left: 80px;
-  }
-  .container-content {
-    margin-top: 120px;
-  }
+	.start-screen-title {
+		display: block;
+	}
+
+	.start-screen {
+		padding: 140px 80px 0px 0px;
+	}
+
+	.tiles-group {
+		left: 100px;
+	}
+
+	.tiles-group {
+		margin-left: 80px;
+	}
+
+	.container-content {
+		margin-top: 120px;
+	}
 }
+
 /*------------------Style Schlemmerecke---------------*/
-.adress{text-align: right; padding: 0px 20px 20px 0px;  font-size: 16px; font-weight: 600;}
+.adress {
+	text-align: right;
+	padding: 0px 20px 20px 0px;
+	font-size: 16px;
+	font-weight: 600;
+}
 
 /*------------------Profile---------------*/
-.keywords {text-align: center; }
-.keywords li { margin-right: 50px;}
+.keywords {
+	text-align: center;
+}
+
+.keywords li {
+	margin-right: 50px;
+}
+
 .card-content {}
-.card-content p {padding: 25px; text-align: justify;} 
+
+.card-content p {
+	padding: 25px;
+	text-align: justify;
+}

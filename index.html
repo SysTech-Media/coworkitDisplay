@@ -1,55 +1,59 @@
 <!DOCTYPE html>
 <html lang="de">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<link href="metro/css/metro-all.css" rel="stylesheet">
-		<link href="css/style.css" rel="stylesheet">
-		<title>coworkit StartScreen</title>
-	</head>
-	<body class="bg-dark fg-white h-vh-100">
-		<div class="top-container bg-orange fg-white"></div>
-		<div class="container-fluid start-screen no-scroll ">
-			<h1 class="start-screen-title">Start</h1>
-			<div class="tiles-area clear">
-				<div class="tiles-grid tiles-group size-6 fg-white" data-group-title="">
-					<a href="map.html" data-role="tile" class="bg-indigo fg-white" data-size="large">
-					    <span class="mif-user icon"></span>
-					    <span class="branding-bar">Wer sitzt wo?</span>
-					</a>
-					<a href="faq.html" data-role="tile" class="bg-cyan fg-white" data-size="large">
-					    <span class="mif-question icon"></span>
-					    <span class="branding-bar">FAQ</span>
-					</a>
-					<div data-role="tile" class="bg-orange fg-white" data-size="large">
-						<span class="mif-calendar icon"></span>
-						<span class="branding-bar">Termine</span>
-						<span class="badge-bottom">10</span>
-					</div>
-					<div data-role="tile" class="bg-orange fg-white" data-size="large">
-						<span class="mif-calendar icon"></span>
-						<span class="branding-bar">Termine</span>
-						<span class="badge-bottom">10</span>
-					</div>
-					<div data-role="tile" class="bg-orange fg-white" data-size="large">
-						<span class="mif-calendar icon"></span>
-						<span class="branding-bar">Termine</span>
-						<span class="badge-bottom">10</span>
-					</div>
-					<a href="schlemmerecke.html" data-role="tile" class="bg-indigo fg-white" data-size="large">
-						<span class="mif-users icon"></span>
-						<span class="branding-bar">Ingo's Schlemmerecke</span>
-					</a>
-					<div data-role="tile" class="bg-orange fg-white" data-size="news">
-						<p>Zeile 1</p>
-						<p>Zeile 2</p>
-						<p>Zeile 3</p>
-					</div>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link href="metro/css/metro-all.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+	<title>coworkit StartScreen</title>
+</head>
+
+<body class="bg-dark fg-white h-vh-100" onload="startTime()">
+	<div class="top-container bg-orange fg-white"></div>
+	<div class="container-fluid start-screen no-scroll ">
+		<h1 class="start-screen-title">Start</h1>
+		<div class="time" id="time"></div>
+		<div class="tiles-area clear">
+			<div class="tiles-grid tiles-group size-6 fg-white" data-group-title="">
+				<a href="map.html" data-role="tile" class="bg-indigo fg-white" data-size="large">
+					<span class="mif-user icon"></span>
+					<span class="branding-bar">Wer sitzt wo?</span>
+				</a>
+				<a href="faq.html" data-role="tile" class="bg-cyan fg-white" data-size="large">
+					<span class="mif-question icon"></span>
+					<span class="branding-bar">FAQ</span>
+				</a>
+				<div data-role="tile" class="bg-orange fg-white" data-size="large">
+					<span class="mif-calendar icon"></span>
+					<span class="branding-bar">Termine</span>
+					<span class="badge-bottom">10</span>
+				</div>
+				<div data-role="tile" class="bg-orange fg-white" data-size="large">
+					<span class="mif-calendar icon"></span>
+					<span class="branding-bar">Termine</span>
+					<span class="badge-bottom">10</span>
+				</div>
+				<div data-role="tile" class="bg-orange fg-white" data-size="large">
+					<span class="mif-calendar icon"></span>
+					<span class="branding-bar">Termine</span>
+					<span class="badge-bottom">10</span>
+				</div>
+				<a href="schlemmerecke.html" data-role="tile" class="bg-indigo fg-white" data-size="large">
+					<span class="mif-users icon"></span>
+					<span class="branding-bar">Ingo's Schlemmerecke</span>
+				</a>
+				<div data-role="tile" class="bg-orange fg-white" data-size="news">
+					<p>Zeile 1</p>
+					<p>Zeile 2</p>
+					<p>Zeile 3</p>
 				</div>
 			</div>
 		</div>
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="metro/js/metro.js"></script>
-		<script src="js/start.js"></script>
-	</body>
+	</div>
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="metro/js/metro.js"></script>
+	<script src="js/start.js"></script>
+</body>
+
 </html>
