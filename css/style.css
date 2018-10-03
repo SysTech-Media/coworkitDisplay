@@ -8,10 +8,24 @@ body{
 }
 
 object.wersitztwo {
-  display: block;
+  top: 0px;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  position: relative;
+  display: block;
+  width: 50%;
+}
+
+iframe.members {
+  top: 0px;
+  top: 0px;
+  margin-left: 60px;
+  margin-right: auto;
+  margin-top: 30px;
+  position: relative;
+  display: block;
+  width: 1080px;
+  height: 800px;
 }
 
 .top-container {
@@ -50,7 +64,7 @@ object.wersitztwo {
     display: block;
   }
   .start-screen {
-    padding: 140px 80px 0 0;
+    padding: 140px 80px 0px 0px;
   }
   .tiles-group {
     left: 100px;
