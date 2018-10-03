@@ -76,3 +76,11 @@ iframe.members {
     margin-top: 120px;
   }
 }
+/*------------------Style Schlemmerecke---------------*/
+.adress{text-align: right; padding: 0px 20px 20px 0px;  font-size: 16px; font-weight: 600;}
+
+/*------------------Profile---------------*/
+.keywords {text-align: center; }
+.keywords li { margin-right: 50px;}
+.card-content {}
+.card-content p {padding: 25px; text-align: justify;} 
