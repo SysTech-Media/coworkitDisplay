@@ -9,15 +9,13 @@
 	<title>coworkit StartScreen</title>
 </head>
 
-<body class="bg-dark fg-white h-vh-100">
+<body class="bg-dark fg-white h-vh-100" onload="startTime()">
 	<div class="top-container bg-orange fg-white">
 	</div>
 	<div class="container-fluid start-screen w-100">
 		<h1 class="start-screen-title"><a href="javascript:history.back()"><span class="mif-arrow-left mif-1g fg-white">&nbsp;</span></a>Wer sitzt wo?</h1>
+		<div class="time" id="time"></div>
 		<div class="container-content">
-			<!-- <object class="wersitztwo" type="image/svg+xml" data="image/test.svg">
-				<img src="image/wersitztwo_offen.png" alt="">
-			</object> -->
 			<svg class="wersitztwo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 720 687">
 				<defs>
 					<style>
