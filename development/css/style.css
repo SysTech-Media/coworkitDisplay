@@ -60,6 +60,56 @@ iframe.members {
 	transform: scale(0.8);
 }
 
+.tile-news {
+	display: block;
+	background-color: #1ba1e2;
+	color: #ffffff;
+	width: 150px;
+	height: 150px;
+	-webkit-box-shadow: inset 0 0 1px #FFFFCC;
+			box-shadow: inset 0 0 1px #FFFFCC;
+	position: relative;
+	overflow: hidden;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+  }
+
+  .tile-news {
+	width: 950px;
+	height: 460px;
+  }
+
+  .tile-news .icon {
+  max-width: 33%;
+  height: 33%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  font-size: 50px;
+  line-height: 50px;
+  z-index: 2;
+}
+
+.tile-news .branding-bar {
+  height: 32px;
+  line-height: 32px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0 10px 5px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  z-index: 2;
+}
+
 .tiles-group {
 	margin-left: 0;
 	margin-top: 120px;
