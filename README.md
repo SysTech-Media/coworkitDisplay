@@ -7,7 +7,7 @@
 
 ## Meta
 
-Tom Groß
-Felix Nithammer
+* Tom Groß
+* Felix Nithammer
 
 [https://github.com/SysTech-Media/coworkitDisplay]
