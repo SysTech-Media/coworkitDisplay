@@ -16,6 +16,25 @@ svg.wersitztwo {
 	width: 50%;
 }
 
+img.round {
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+	border-width: 4px;
+	border-color: #fa6800;
+	border-style: solid;
+}
+
+img.qr {
+	max-height: 200px;
+	max-width: 200px;
+}
+
+img.logo {
+	max-width: 200px;
+	max-height: 200px;
+}
+
 iframe.members {
 	bottom: 0px;
 	left: 0px;
