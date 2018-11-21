@@ -81,11 +81,12 @@
                <span class="mif-users icon"></span>
                <span class="branding-bar">Ingo's Schlemmerecke</span>
                </a>
-               <div data-role="tile" class="bg-orange fg-white" data-size="news" id="events">
+               <div data-role="tile" class="bg-orange fg-white" data-size="news">
+						<span id="events"></span>
                </div>
             </div>
-         </div>
-      </div>
+		 </div>
+	  </div>
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
       <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
       <script src="js/start.js"></script>
@@ -101,7 +102,7 @@
          	} else {
          		maxItems = data.events.length
          	}
-         
+
          	console.log(data.events.length)
          	console.log(maxItems)
          
@@ -109,8 +110,7 @@
          		var monatszahl = parseInt(data.events[i].start_date_details.month) - 1
          		var monatsname = monat[monatszahl]
          		console.log(i)
-         		text += `<a href="javascript:void(0)" onclick="openInfo();">
-         	
+         		text += `<a href="javascript:void(0)" onclick="openInfo(${i});">
          	<div class="cal-card-wrapper">
          			<span class="cal-card-day">${data.events[i].start_date_details.day}</span>
          			<span class="cal-card-month">${monatsname}</span>
@@ -118,19 +118,18 @@
          			<span class="cal-card-name">${data.events[i].title}</span>
          			<span class="cal-card-longline"></span>
          			<span class="cal-card-time">${data.events[i].start_date_details.hour}:${data.events[i].start_date_details.minutes} - ${data.events[i].end_date_details.hour}:${data.events[i].end_date_details.minutes}</span>
-         		</div>
-         
-         	</a><br>`
+				 </div>
+         	</a>`
          	}
          	document.getElementById("events").innerHTML = text;
          });
          
-         function openInfo() {
+         function openInfo(id) {
          	$.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function (data) {
          
          		var html_content =
-         			`<h3>${data.events[0].title}</h3>
-         <p>${data.events[0].description}.</p>`;
+         			`<h3>${data.events[id].title}</h3>
+         <p>${data.events[id].description}.</p>`;
          		Metro.infobox.create(html_content);
          	});
          }

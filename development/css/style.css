@@ -86,7 +86,7 @@ iframe.members {
 }
 
 .tile-news {
-	display: block;
+	display: inline-block;
 	background-color: #1ba1e2;
 	color: #ffffff;
 	width: 950px;
@@ -157,20 +157,14 @@ iframe.members {
 
 /*------------------Index-Calendar--------------*/
 
-#events {
-	display: inline-block;
-}
-
 .cal-card-wrapper {
-	display: block;
-	position: relative;
+	display: inline-block;
 	color: black;
 	background-color: white;
 	border: 1px solid black;
 	width: 200px;
 	height: 300px;
 	margin: 17px;
-	float: left;
 }
 
 .cal-card-day {
