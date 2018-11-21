@@ -89,8 +89,8 @@ iframe.members {
 	display: block;
 	background-color: #1ba1e2;
 	color: #ffffff;
-	width: 150px;
-	height: 150px;
+	width: 950px;
+	height: 334px;
 	-webkit-box-shadow: inset 0 0 1px #FFFFCC;
 			box-shadow: inset 0 0 1px #FFFFCC;
 	position: relative;
@@ -100,40 +100,6 @@ iframe.members {
 		-ms-user-select: none;
 			user-select: none;
   }
-
-  .tile-news {
-	width: 950px;
-	height: 460px;
-  }
-
-  .tile-news .icon {
-  max-width: 33%;
-  height: 33%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
-  font-size: 50px;
-  line-height: 50px;
-  z-index: 2;
-}
-
-.tile-news .branding-bar {
-  height: 32px;
-  line-height: 32px;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 0 10px 5px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  z-index: 2;
-}
 
 .tiles-group {
 	margin-left: 0;
@@ -187,4 +153,108 @@ iframe.members {
 .card-content p {
 	padding: 25px;
 	text-align: justify;
+}
+
+/*------------------Index-Calendar--------------*/
+
+#events {
+	display: inline-block;
+}
+
+.cal-card-wrapper {
+	display: block;
+	position: relative;
+	color: black;
+	background-color: white;
+	border: 1px solid black;
+	width: 200px;
+	height: 300px;
+	margin: 17px;
+	float: left;
+}
+
+.cal-card-day {
+	height: 100px;
+	line-height: 100px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	text-align: center;
+	font-size: 4rem;
+	font-weight: 800;
+	padding: 20px 10px 5px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.cal-card-month {
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	left: 0;
+	top: 100px;
+	right: 0;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 800;
+	padding: 0px 10px 5px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.cal-card-shortline {
+	height: 1px;
+	width: 50px;
+	position: absolute;
+	left: 75px;
+	top: 150px;
+	right: 0px;
+	text-align: center;
+	border: 0.5px solid black;
+}
+
+.cal-card-name {
+	height: 80px;
+	line-height: 20px;
+	position: absolute;
+	left: 0;
+	top: 151px;
+	right: 0px;
+	text-align: center;
+	font-size: 1rem;
+	font-weight: 800;
+	padding: 20px 10px 5px;
+	overflow: hidden;
+	white-space: pre-wrap;
+	text-overflow: ellipsis;
+}
+
+.cal-card-longline {
+	height: 1px;
+	width: 150px;
+	position: absolute;
+	left: 25px;
+	top: 251px;
+	right: 0px;
+	text-align: center;
+	border: 0.5px solid black;
+}
+
+.cal-card-time {
+	height: 48px;
+	line-height: 20px;
+	position: absolute;
+	left: 0;
+	bottom: 0px;
+	right: 0px;
+	text-align: center;
+	font-size: 0.8rem;
+	font-weight: 800;
+	padding: 15px 10px 5px;
+	overflow: hidden;
+	white-space: pre-wrap;
+	text-overflow: ellipsis;
 }
