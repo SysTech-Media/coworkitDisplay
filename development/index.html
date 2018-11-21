@@ -1,116 +1,139 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
-	<link href="css/style.css" rel="stylesheet">
-	<title>coworkit StartScreen</title>
-</head>
-
-<body class="bg-dark fg-white h-vh-100" onload="startTime()">
-	<div class="top-container bg-orange fg-white container-fluid">
-		<div class="grid">
-			<div class="row">
-				<div class="cell-md-2">
-					<img class="top-logo" src="image/coworkit.png">
-				</div>
-				<div class="cell">
-					<div class="row">
-						<div class="cell">
-							<h2>&nbsp;</h2>
-						</div>
-					</div>
-					<div class="row">
-						<div class="cell">
-							<h1><b>coworkit</b></h1>
-						</div>
-					</div>
-					<div class="row">
-						<div class="cell">
-							&nbsp;
-						</div>
-					</div>
-				</div>
-				<div class="cell">
-					<div class="row">
-						<div class="cell">
-							powered by
-						</div>
-					</div>
-					<div class="row">
-						<div class="cell">
-							<img src="image/logo_systech.png" style="max-height:70px;">
-						</div>
-					</div>
-					<div class="row">
-						<div class="cell">
-							rechts unten
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="container-fluid start-screen no-scroll ">
-		<h1 class="start-screen-title">Start</h1>
-		<div class="time" id="time"></div>
-		<div class="tiles-area clear">
-			<div class="tiles-grid tiles-group size-6 fg-white" data-group-title="">
-				<a href="map.html" data-role="tile" class="bg-indigo fg-white" data-size="large">
-					<span class="mif-user icon"></span>
-					<span class="branding-bar">Wer sitzt wo?</span>
-				</a>
-				<a href="faq.html" data-role="tile" class="bg-cyan fg-white" data-size="large">
-					<span class="mif-question icon"></span>
-					<span class="branding-bar">FAQ</span>
-				</a>
-				<div data-role="tile" class="bg-orange fg-white" data-size="large">
-					<span class="mif-calendar icon"></span>
-					<span class="branding-bar">Termine</span>
-					<span class="badge-bottom">10</span>
-				</div>
-				<a href="team.html" data-role="tile" class="bg-green fg-white" data-size="large">
-					<span class="mif-users icon"></span>
-					<span class="branding-bar">Team</span>
-				</a>
-				<a href="socialwall.html" data-role="tile" class="bg-magenta fg-white" data-size="large">
-					<span class="mif-users icon"></span>
-					<span class="branding-bar">Socialwall</span>
-				</a>
-				<a href="schlemmerecke.html" data-role="tile" class="bg-indigo fg-white" data-size="large">
-					<span class="mif-users icon"></span>
-					<span class="branding-bar">Ingo's Schlemmerecke</span>
-				</a>
-				<div data-role="tile" class="bg-orange fg-white" data-size="news">
-					<div id="events"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-	<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
-	<script src="js/start.js"></script>
-
-	<script>
-		$.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function (data) {
-
-			var text = `<a href="javascript:void(0)" onclick="openInfo();">${data.events[0].start_date_details.day}.${data.events[0].start_date_details.month}.${data.events[0].start_date_details.year} ${data.events[0].start_date_details.hour}:${data.events[0].start_date_details.minutes} - ${data.events[0].title}</a><br>`
-
-			document.getElementById("events").innerHTML = text;
-		});
-
-		function openInfo() {
-			$.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function (data) {
-
-				var html_content =
-					`<h3>${data.events[0].title}</h3>
-	<p>${data.events[0].description}.</p>`;
-				Metro.infobox.create(html_content);
-			});
-		}
-	</script>
-</body>
-
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+      <link href="css/style.css" rel="stylesheet">
+      <title>coworkit StartScreen</title>
+   </head>
+   <body class="bg-dark fg-white h-vh-100" onload="startTime()">
+      <div class="top-container bg-orange fg-white container-fluid">
+         <div class="grid">
+            <div class="row">
+               <div class="cell-md-2">
+                  <img class="top-logo" src="image/coworkit.png">
+               </div>
+               <div class="cell">
+                  <div class="row">
+                     <div class="cell">
+                        <h2>&nbsp;</h2>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="cell">
+                        <h1><b>coworkit</b></h1>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="cell">
+                        &nbsp;
+                     </div>
+                  </div>
+               </div>
+               <div class="cell">
+                  <div class="row">
+                     <div class="cell">
+                        powered by
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="cell">
+                        <img src="image/logo_systech.png" style="max-height:70px;">
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="cell">
+                        rechts unten
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container-fluid start-screen no-scroll ">
+         <h1 class="start-screen-title">Start</h1>
+         <div class="time" id="time"></div>
+         <div class="tiles-area clear">
+            <div class="tiles-grid tiles-group size-6 fg-white" data-group-title="">
+               <a href="map.html" data-role="tile" class="bg-indigo fg-white" data-size="large">
+               <span class="mif-user icon"></span>
+               <span class="branding-bar">Wer sitzt wo?</span>
+			   </a>
+               <a href="faq.html" data-role="tile" class="bg-cyan fg-white" data-size="large">
+               <span class="mif-question icon"></span>
+               <span class="branding-bar">FAQ</span>
+			   </a>
+               <div data-role="tile" class="bg-orange fg-white" data-size="large">
+                  <span class="mif-calendar icon"></span>
+                  <span class="branding-bar">Termine</span>
+                  <span class="badge-bottom">10</span>
+               </div>
+               <a href="team.html" data-role="tile" class="bg-green fg-white" data-size="large">
+               <span class="mif-users icon"></span>
+               <span class="branding-bar">Team</span>
+               </a>
+               <a href="socialwall.html" data-role="tile" class="bg-magenta fg-white" data-size="large">
+               <span class="mif-users icon"></span>
+               <span class="branding-bar">Socialwall</span>
+               </a>
+               <a href="schlemmerecke.html" data-role="tile" class="bg-indigo fg-white" data-size="large">
+               <span class="mif-users icon"></span>
+               <span class="branding-bar">Ingo's Schlemmerecke</span>
+               </a>
+               <div data-role="tile" class="bg-orange fg-white" data-size="news" id="events">
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+      <script src="js/start.js"></script>
+      <script>
+         $.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function (data) {
+         
+         	var monat = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September',    
+                       'Oktober','November','Dezember']
+         	var text = ""
+         	
+         	if (data.events.length > 4) {
+         		maxItems = 4
+         	} else {
+         		maxItems = data.events.length
+         	}
+         
+         	console.log(data.events.length)
+         	console.log(maxItems)
+         
+         	for (i = 0; i < maxItems; i++) {
+         		var monatszahl = parseInt(data.events[i].start_date_details.month) - 1
+         		var monatsname = monat[monatszahl]
+         		console.log(i)
+         		text += `<a href="javascript:void(0)" onclick="openInfo();">
+         	
+         	<div class="cal-card-wrapper">
+         			<span class="cal-card-day">${data.events[i].start_date_details.day}</span>
+         			<span class="cal-card-month">${monatsname}</span>
+         			<span class="cal-card-shortline"></span>
+         			<span class="cal-card-name">${data.events[i].title}</span>
+         			<span class="cal-card-longline"></span>
+         			<span class="cal-card-time">${data.events[i].start_date_details.hour}:${data.events[i].start_date_details.minutes} - ${data.events[i].end_date_details.hour}:${data.events[i].end_date_details.minutes}</span>
+         		</div>
+         
+         	</a><br>`
+         	}
+         	document.getElementById("events").innerHTML = text;
+         });
+         
+         function openInfo() {
+         	$.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function (data) {
+         
+         		var html_content =
+         			`<h3>${data.events[0].title}</h3>
+         <p>${data.events[0].description}.</p>`;
+         		Metro.infobox.create(html_content);
+         	});
+         }
+      </script>
+   </body>
 </html>
