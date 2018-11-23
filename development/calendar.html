@@ -2,56 +2,56 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.print.css">
-    <link href="css/style.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.min.js"></script>
-    <script src="js/start.js"></script>
-    <script>
-            $(function() {
-    $('#calendar').fullCalendar({
-        height: "auto",
-        locale: "de",
-        header: {
-                    left:   'title',
-                    center: '',
-                    right:  'today prev,next'
-                },
-        defaultView: 'month',
-        events: [
-    {
-      title  : 'Workshop: Social Media Basics',
-      start  : '2018-11-29T17:00:00',
-      end    : '2018-11-29T19:00:00'
-    },
-    {
-      title  : 'Gründerstammtisch Solingen',
-      start  : '2018-12-06T18:00:00',
-      end    : '2018-12-06T21:00:00'
-    }
-  ]
-    })
-    });
-        </script>
-    <title>coworkit StartScreen</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css" rel="stylesheet">
+	<link href='https://use.fontawesome.com/releases/v5.0.6/css/all.css' rel='stylesheet'>
+	<link href='./css/calendar/fullcalendar.min.css' rel='stylesheet' />
+	<link href='./css/calendar/fullcalendar.print.min.css' rel='stylesheet' media='print' />
+	<link href="css/style.css" rel="stylesheet">
+
+	<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+	<script src='./js/calendar/moment.min.js'></script>
+	<script src='./js/calendar/jquery.min.js'></script>
+	<script src='./js/calendar/fullcalendar.min.js'></script>
+	<script src="js/start.js"></script>
+	<script>
+		$(function() {
+			$('#calendar').fullCalendar({
+				themeSystem: 'bootstrap4',
+				header: {
+					left: 'title',
+					center: '',
+					right: 'today prev,next'
+				},
+				bootstrapFontAwesome: {
+					close: 'fa-times',
+					prev: 'fa-chevron-left',
+					next: 'fa-chevron-right',
+					prevYear: 'fa-angle-double-left',
+					nextYear: 'fa-angle-double-right'
+				},
+				navLinks: true, // can click day/week names to navigate views
+				editable: true,
+				eventLimit: true, // allow "more" link when too many events
+				events: 'https://fullcalendar.io/demo-events.json'
+			});
+		});
+	</script>
+	<title>coworkit StartScreen</title>
 </head>
 
 <body class="bg-dark fg-white h-vh-100" onload="startTime()">
-    <div class="top-container bg-orange fg-white">
-    </div>
-    <div class="container-fluid start-screen w-100">
-        <h1 class="start-screen-title"><a href="javascript:history.back()"><span class="mif-arrow-left mif-1g fg-white">&nbsp;</span></a>Kalender</h1>
-        <div class="time" id="time"></div>
-        <div class="container-content">
-        <div class="fg-orange" id="calendar"></div>
-        </div>
-    </div>
+	<div class="top-container bg-orange fg-white">
+	</div>
+	<div class="container-fluid start-screen w-100">
+		<h1 class="start-screen-title"><a href="javascript:history.back()"><span class="mif-arrow-left mif-1g fg-white">&nbsp;</span></a>Kalender</h1>
+		<div class="time" id="time"></div>
+		<div class="container-content">
+			<div id="calendar"></div>
+		</div>
+	</div>
 </body>
 
 </html>

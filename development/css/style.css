@@ -278,3 +278,8 @@ iframe.members {
 	max-height: 250px;
 	position: relative;
 }
+
+#calendar {
+	max-width: 900px;
+	margin: 0 auto;
+}

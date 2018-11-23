@@ -1,98 +1,101 @@
 <!DOCTYPE html>
 <html lang="de">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-      <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
-      <link href="css/style.css" rel="stylesheet">
-      <title>coworkit StartScreen</title>
-   </head>
-   <body class="bg-dark fg-white h-vh-100" onload="pageLoad()">
-      <div class="top-container bg-orange fg-white container-fluid">
-         <div class="grid">
-            <div class="row">
-               <div class="cell-md-2">
-                  <img class="top-logo" src="image/coworkit.png">
-               </div>
-               <div class="cell">
-                  <div class="row">
-                     <div class="cell">
-                        <h2>&nbsp;</h2>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="cell">
-                        <h1><b>coworkit</b></h1>
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="cell">
-                        &nbsp;
-                     </div>
-                  </div>
-               </div>
-               <div class="cell">
-                  <div class="row">
-                     <div class="cell">
-                        powered by
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="cell">
-                        <img src="image/logo_systech.png" style="max-height:70px;">
-                     </div>
-                  </div>
-                  <div class="row">
-                     <div class="cell">
-                        rechts unten
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="container-fluid start-screen no-scroll ">
-         <h1 class="start-screen-title">Start</h1>
-         <div class="time" id="time"></div>
-         <div class="tiles-area clear">
-            <div class="tiles-grid tiles-group size-6 fg-white" data-group-title="">
-               <a href="map.html" data-role="tile" class="bg-indigo fg-white" data-size="large">
-               <span class="mif-user icon"></span>
-               <span class="branding-bar">Wer sitzt wo?</span>
-			   </a>
-               <a href="faq.html" data-role="tile" class="bg-cyan fg-white" data-size="large">
-               <span class="mif-question icon"></span>
-               <span class="branding-bar">FAQ</span>
-			   </a>
-                  <a href="calendar.html" data-role="tile" class="bg-orange fg-white" data-size="large">
-                  <span class="mif-calendar icon"></span>
-                  <span class="branding-bar">Termine</span>
-                  <span class="badge-bottom" id="badge-calendar"></span>
-               </a>
-               <a href="team.html" data-role="tile" class="bg-green fg-white" data-size="large">
-               <span class="mif-users icon"></span>
-               <span class="branding-bar">Team</span>
-               </a>
-               <a href="socialwall.html" data-role="tile" class="bg-magenta fg-white" data-size="large">
-               <span class="mif-users icon"></span>
-               <span class="branding-bar">Socialwall</span>
-               </a>
-               <a href="schlemmerecke.html" data-role="tile" class="bg-indigo fg-white" data-size="large">
-               <span class="mif-users icon"></span>
-               <span class="branding-bar">Ingo's Schlemmerecke</span>
-               </a>
-               <div data-role="tile" class="bg-orange fg-white" data-size="news">
-						<span id="events"></span>
-               </div>
-            </div>
-       </div>
-       <div class="fg-white footer">
-         <img class="footer-logo" src="./image/Logo Wei·.png">
-      </div>
-     </div>
-     
-      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-      <script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
-      <script src="js/start.js"></script>
-   </body>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+	<link href="css/style.css" rel="stylesheet">
+	<title>coworkit StartScreen</title>
+</head>
+
+<body class="bg-dark fg-white h-vh-100" onload="pageLoad()">
+	<div class="top-container bg-orange fg-white container-fluid">
+		<div class="grid">
+			<div class="row">
+				<div class="cell-md-2">
+					<img class="top-logo" src="image/coworkit.png">
+				</div>
+				<div class="cell">
+					<div class="row">
+						<div class="cell">
+							<h2>&nbsp;</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell">
+							<h1><b>coworkit</b></h1>
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell">
+							&nbsp;
+						</div>
+					</div>
+				</div>
+				<div class="cell">
+					<div class="row">
+						<div class="cell">
+							powered by
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell">
+							<img src="image/logo_systech.png" style="max-height:70px;">
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell">
+							rechts unten
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid start-screen no-scroll ">
+		<h1 class="start-screen-title">Start</h1>
+		<div class="time" id="time"></div>
+		<div class="tiles-area clear">
+			<div class="tiles-grid tiles-group size-6 fg-white" data-group-title="">
+				<a href="map.html" data-role="tile" class="bg-indigo fg-white" data-size="large">
+					<span class="mif-user icon"></span>
+					<span class="branding-bar">Wer sitzt wo?</span>
+				</a>
+				<a href="faq.html" data-role="tile" class="bg-cyan fg-white" data-size="large">
+					<span class="mif-question icon"></span>
+					<span class="branding-bar">FAQ</span>
+				</a>
+				<a href="calendar.html" data-role="tile" class="bg-orange fg-white" data-size="large">
+					<span class="mif-calendar icon"></span>
+					<span class="branding-bar">Termine</span>
+					<span class="badge-bottom" id="badge-calendar"></span>
+				</a>
+				<a href="team.html" data-role="tile" class="bg-green fg-white" data-size="large">
+					<span class="mif-users icon"></span>
+					<span class="branding-bar">Team</span>
+				</a>
+				<a href="socialwall.html" data-role="tile" class="bg-magenta fg-white" data-size="large">
+					<span class="mif-share icon"></span>
+					<span class="branding-bar">Socialwall</span>
+				</a>
+				<a href="schlemmerecke.html" data-role="tile" class="bg-indigo fg-white" data-size="large">
+					<span class="mif-restaurant icon"></span>
+					<span class="branding-bar">Ingo's Schlemmerecke</span>
+				</a>
+				<div data-role="tile" class="bg-orange fg-white" data-size="news">
+					<span id="events"></span>
+				</div>
+			</div>
+		</div>
+		<div class="fg-white footer">
+			<img class="footer-logo" src="./image/Logo Wei·.png">
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+	<script src="js/start.js"></script>
+</body>
+
 </html>

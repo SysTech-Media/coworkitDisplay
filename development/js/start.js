@@ -82,26 +82,27 @@ function checkTime(i) {
 }
 
 function getCalendarData() {
-$.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function (data) {
-         
-         	var monat = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September',    
-                       'Oktober','November','Dezember']
-         	var text = ""
-         	
-         	if (data.events.length > 4) {
-         		maxItems = 4
-         	} else {
-         		maxItems = data.events.length
-         	}
+	$.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function(data) {
 
-         	console.log(data.events.length)
-         	console.log(maxItems)
-         
-         	for (i = 0; i < maxItems; i++) {
-         		var monatszahl = parseInt(data.events[i].start_date_details.month) - 1
-         		var monatsname = monat[monatszahl]
-         		console.log(i)
-         		text += `<a href="javascript:void(0)" onclick="openInfo(${i});">
+		var monat = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September',
+			'Oktober', 'November', 'Dezember'
+		]
+		var text = ""
+
+		if (data.events.length > 4) {
+			maxItems = 4
+		} else {
+			maxItems = data.events.length
+		}
+
+		console.log(data.events.length)
+		console.log(maxItems)
+
+		for (i = 0; i < maxItems; i++) {
+			var monatszahl = parseInt(data.events[i].start_date_details.month) - 1
+			var monatsname = monat[monatszahl]
+			console.log(i)
+			text += `<a href="javascript:void(0)" onclick="openInfo(${i});">
          	<div class="cal-card-wrapper">
          			<span class="cal-card-day">${data.events[i].start_date_details.day}</span>
          			<span class="cal-card-month">${monatsname}</span>
@@ -111,19 +112,19 @@ $.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function (data)
          			<span class="cal-card-time">${data.events[i].start_date_details.hour}:${data.events[i].start_date_details.minutes} - ${data.events[i].end_date_details.hour}:${data.events[i].end_date_details.minutes}</span>
 				 </div>
          	</a>`
-         	}
-			 document.getElementById("events").innerHTML = text;
-			 document.getElementById("badge-calendar").innerHTML = data.events.length
-			 var t = setTimeout(startTime, 60000);
-		 });
 		}
-         
-         function openInfo(id) {
-         	$.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function (data) {
-         
-         		var html_content =
-         			`<h3>${data.events[id].title}</h3>
+		document.getElementById("events").innerHTML = text;
+		document.getElementById("badge-calendar").innerHTML = data.events.length
+		var t = setTimeout(startTime, 60000);
+	});
+}
+
+function openInfo(id) {
+	$.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function(data) {
+
+		var html_content =
+			`<h3>${data.events[id].title}</h3>
          <p>${data.events[id].description}.</p>`;
-         		Metro.infobox.create(html_content);
-         	});
-         }
+		Metro.infobox.create(html_content);
+	});
+}
