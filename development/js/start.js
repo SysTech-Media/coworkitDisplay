@@ -59,6 +59,7 @@ $(window).on(Metro.events.resize + "-start-screen-resize", function() {
 function pageLoad() {
 	startTime()
 	getCalendarData()
+	var t = setTimeout(gotoIndex, 300000);
 }
 
 function startTime() {
@@ -79,6 +80,10 @@ function checkTime(i) {
 		i = "0" + i
 	}; // add zero in front of numbers < 10
 	return i;
+}
+
+function gotoIndex() {
+	window.location.href = './index.html';
 }
 
 function getCalendarData() {
