@@ -253,6 +253,15 @@ iframe.members {
 	text-overflow: ellipsis;
 }
 
+/*------------------SocialWall--------------*/
+
+#wallsio-iframe {
+	pointer-events: none;
+	border:0;
+	height:1330px;
+	width:1060px;
+}
+
 /*------------------Footer--------------*/
 
 .footer {
