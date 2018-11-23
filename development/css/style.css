@@ -320,6 +320,13 @@ iframe.members {
 	text-overflow: ellipsis;
 }
 
+/*------------------Calendar--------------*/
+#calendar {
+	padding-top: 50px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /*------------------SocialWall--------------*/
 
 #wallsio-iframe {
