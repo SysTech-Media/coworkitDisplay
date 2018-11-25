@@ -222,6 +222,10 @@ iframe.members {
 	text-align: justify;
 }
 
+h4.uppercase {
+	text-transform: uppercase;
+}
+
 /*------------------Index-Calendar--------------*/
 
 .cal-card-wrapper {
