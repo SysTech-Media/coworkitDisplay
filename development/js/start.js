@@ -18,7 +18,7 @@ $.StartScreen = function() {
 			}
 		});
 		$(".tiles-area").css({
-			width: tileAreaWidth
+			width: 1080 //tileAreaWidth
 		});
 	};
 
