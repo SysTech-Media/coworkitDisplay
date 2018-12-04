@@ -211,19 +211,14 @@ iframe.members {
 /*------------------Profile---------------*/
 .keywords {
 	text-align: center;
+	hyphens: auto;
 }
 
-.keywords li {
-	margin-right: 50px;
-}
-
-.card-content p {
-	padding: 25px;
-	text-align: justify;
-}
-
-h4.uppercase {
-	text-transform: uppercase;
+.profile-description {
+	hyphens: auto;
+	text-align:justify;
+	left: 20px;
+	width:95%;
 }
 
 /*------------------Index-Calendar--------------*/
@@ -355,7 +350,7 @@ h4.uppercase {
 #wallsio-iframe {
 	pointer-events: none;
 	border:0;
-	height:1330px;
+	height:1540px;
 	width:1060px;
 }
 
