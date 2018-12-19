@@ -135,6 +135,6 @@ function openInfo(id) {
 }
 
 function playGame() {
-	var html_content = `<iframe src="https://itch.io/embed/346797" height="167" width="552" frameborder="0"></iframe>`;
+	var html_content = `</br><iframe src="https://v6p9d9t4.ssl.hwcdn.net/html/1197430/K.O.Workit_V1.0[touch+small]/index.html" class="game"></iframe>`;
 	Metro.infobox.create(html_content);
 }

@@ -353,7 +353,7 @@ text-transform: uppercase;
 
 #wallsio-iframe {
 	pointer-events: none;
-	border:0;
+	border:1px solid white;
 	height:1540px;
 	width:1060px;
 }
@@ -382,6 +382,6 @@ text-transform: uppercase;
 
 /*------------------Game--------------*/
 .game {
-	height: 1800px;
-	width: 900px;
+	height: 1400px;
+	width: 800px;
 }
