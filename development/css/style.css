@@ -53,6 +53,10 @@ iframe.members {
 	height: 150px;
 }
 
+.uppercase {
+text-transform: uppercase;
+}
+
 .time {
 	position: fixed;
 	top: 180px;
@@ -378,4 +382,10 @@ iframe.members {
 #calendar {
 	max-width: 900px;
 	margin: 0 auto;
+}
+
+/*------------------Game--------------*/
+.game {
+	height: 1800px;
+	width: 900px;
 }

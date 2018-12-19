@@ -1,16 +1,16 @@
-$.StartScreen = function() {
+$.StartScreen = function () {
 	var plugin = this;
 	var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
 
-	plugin.init = function() {
+	plugin.init = function () {
 		setTilesAreaSize();
 		if (width > Metro.media_sizes.LD) addMouseWheel();
 	};
 
-	var setTilesAreaSize = function() {
+	var setTilesAreaSize = function () {
 		var groups = $(".tiles-group");
 		var tileAreaWidth = 80;
-		$.each(groups, function(i, t) {
+		$.each(groups, function (i, t) {
 			if (width <= Metro.media_sizes.LD) {
 				tileAreaWidth = width;
 			} else {
@@ -22,8 +22,8 @@ $.StartScreen = function() {
 		});
 	};
 
-	var addMouseWheel = function() {
-		$("body").mousewheel(function(event, delta, deltaX, deltaY) {
+	var addMouseWheel = function () {
+		$("body").mousewheel(function (event, delta, deltaX, deltaY) {
 			var page = $(".start-screen");
 			var scroll_value = delta * 50;
 			page.scrollLeft(page.scrollLeft() - scroll_value);
@@ -36,9 +36,9 @@ $.StartScreen = function() {
 
 $.StartScreen();
 
-$.each($('[class*=tile-]'), function() {
+$.each($('[class*=tile-]'), function () {
 	var tile = $(this);
-	setTimeout(function() {
+	setTimeout(function () {
 		tile.css({
 			opacity: 1,
 			"transform": "scale(1)",
@@ -52,7 +52,7 @@ $(".tiles-group").animate({
 	left: 0
 });
 
-$(window).on(Metro.events.resize + "-start-screen-resize", function() {
+$(window).on(Metro.events.resize + "-start-screen-resize", function () {
 	$.StartScreen();
 });
 
@@ -87,7 +87,7 @@ function gotoIndex() {
 }
 
 function getCalendarData() {
-	$.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function(data) {
+	$.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function (data) {
 
 		var monat = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September',
 			'Oktober', 'November', 'Dezember'
@@ -125,11 +125,16 @@ function getCalendarData() {
 }
 
 function openInfo(id) {
-	$.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function(data) {
+	$.getJSON('https://coworkit.de/wp-json/tribe/events/v1/events/', function (data) {
 
 		var html_content =
 			`<h3>${data.events[id].title}</h3>
          <p>${data.events[id].description}.</p>`;
 		Metro.infobox.create(html_content);
 	});
+}
+
+function playGame() {
+	var html_content = `<iframe src="https://itch.io/embed/346797" height="167" width="552" frameborder="0"></iframe>`;
+	Metro.infobox.create(html_content);
 }
